@@ -1,0 +1,28 @@
+server:
+  port: 8084
+spring:
+#  application:
+#    name: reggie_take_out   指定应用名称，可选
+  banner:
+    image:
+      location: classpath:banner.png
+  datasource:
+    druid:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: "1024"
+#      mybatis-plus 配置
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+reggie:
+#  文件上传 转存路径
+  img_path: C:\Users\86176\Desktop\企业级别项目例子\资料\图片资源
