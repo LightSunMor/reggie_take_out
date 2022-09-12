@@ -25,4 +25,4 @@ mybatis-plus:
 
 reggie:
 #  文件上传 转存路径
-  img_path: C:\Users\86176\Desktop\企业级别项目例子\资料\图片资源
+  img_path: D:\Spring Boot\AllImages\图片资源
